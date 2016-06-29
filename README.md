@@ -1,0 +1,1 @@
+# php-coding-standard
