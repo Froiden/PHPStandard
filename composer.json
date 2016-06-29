@@ -1,0 +1,16 @@
+{
+    "name": "froiden/php-coding-standard",
+    "description": "PHP coding standard to be followed at Froiden",
+    "type": "php-code-sniffer",
+    "require": {
+        "squizlabs/php_codesniffer": "^2.6",
+        "typo3-ci/typo3sniffpool": "^2.1"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Shashank Jain",
+            "email": "shashank@froiden.com"
+        }
+    ]
+}
