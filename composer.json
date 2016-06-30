@@ -4,7 +4,8 @@
     "type": "php-code-sniffer",
     "require": {
         "squizlabs/php_codesniffer": "^2.6",
-        "typo3-ci/typo3sniffpool": "^2.1"
+        "typo3-ci/typo3sniffpool": "^2.1",
+        "phpmd/phpmd": "^2.4",
     },
     "license": "MIT",
     "authors": [

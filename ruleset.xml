@@ -62,8 +62,8 @@
     </rule>
     <rule ref="../../typo3-ci/typo3sniffpool/Sniffs/Commenting/DoubleSlashCommentsInNewLineSniff.php"/>
     <rule ref="../../typo3-ci/typo3sniffpool/Sniffs/Files/FilenameSniff.php"/>
-    <rule ref="../../typo3-ci/typo3sniffpool/Sniffs/Scope/AlwaysReturnSniff.php"/>
     <rule ref="./Sniffs/Spacing/SpaceBetweenBlocksSniff.php" />
     <rule ref="./Sniffs/Spacing/ValidVariableNameSniff.php" />
     <rule ref="./Sniffs/Usage/UnusedFunctionVariableSniff.php" />
+    <rule ref="./Sniffs/Comments/CommentsSniff.php" />
 </ruleset>
