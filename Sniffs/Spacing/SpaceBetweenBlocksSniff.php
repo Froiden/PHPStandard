@@ -1,7 +1,7 @@
 <?php
 
 // @codingStandardsIgnoreStart
-class PHP_Standard_Sniffs_Spacing_SpaceBetweenBlocksSniff implements PHP_CodeSniffer_Sniff
+class php_standard_Sniffs_Spacing_SpaceBetweenBlocksSniff implements PHP_CodeSniffer_Sniff
 {
 
     /**
