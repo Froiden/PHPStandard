@@ -1,7 +1,7 @@
 <?php
 
     // @codingStandardsIgnoreStart
-    class FroidenStandard_Sniffs_Usage_UnusedFunctionVariableSniff implements PHP_CodeSniffer_Sniff
+    class PHPStandard_Sniffs_Usage_UnusedFunctionVariableSniff implements PHP_CodeSniffer_Sniff
     {
         /**
          * Returns an array of tokens this test wants to listen for.

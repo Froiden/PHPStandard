@@ -25,7 +25,6 @@
     <rule ref="Generic.PHP.DisallowShortOpenTag"/>
     <rule ref="Generic.PHP.ForbiddenFunctions"/>
     <rule ref="Generic.PHP.LowerCaseConstant"/>
-    <rule ref="Generic.WhiteSpace.ScopeIndent"/>
     <rule ref="MySource.PHP.GetRequestData"/>
     <rule ref="MySource.PHP.AjaxNullComparison"/>
     <rule ref="PEAR.Classes.ClassDeclaration"/>
@@ -61,9 +60,9 @@
             <property name="ignoreBlankLines" value="true"/>
         </properties>
     </rule>
-    <!--<rule ref="../typo3-ci/typo3sniffpool/Sniffs/Commenting/DoubleSlashCommentsInNewLineSniff.php"/>-->
-    <!--<rule ref="../typo3-ci/typo3sniffpool/Sniffs/Files/FilenameSniff.php"/>-->
-    <!--<rule ref="../typo3-ci/typo3sniffpool/Sniffs/Scope/AlwaysReturnSniff.php"/>-->
+    <rule ref="../../typo3-ci/typo3sniffpool/Sniffs/Commenting/DoubleSlashCommentsInNewLineSniff.php"/>
+    <rule ref="../../typo3-ci/typo3sniffpool/Sniffs/Files/FilenameSniff.php"/>
+    <rule ref="../../typo3-ci/typo3sniffpool/Sniffs/Scope/AlwaysReturnSniff.php"/>
     <rule ref="./Sniffs/Spacing/SpaceBetweenBlocksSniff.php" />
     <rule ref="./Sniffs/Spacing/ValidVariableNameSniff.php" />
     <rule ref="./Sniffs/Usage/UnusedFunctionVariableSniff.php" />

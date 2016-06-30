@@ -13,7 +13,7 @@
      *
      */
 
-    class FroidenStandard_Sniffs_Spacing_ValidVariableNameSniff extends PHP_CodeSniffer_Standards_AbstractVariableSniff
+    class PHPStandard_Sniffs_Spacing_ValidVariableNameSniff extends PHP_CodeSniffer_Standards_AbstractVariableSniff
     {
         /**
          * Tokens to ignore so that we can find a DOUBLE_COLON.

@@ -1,6 +1,6 @@
 <?php
-// @codingStandardsIgnoreStart
-class FroidenStandard_Sniffs_Spacing_SpaceBetweenBlocksSniff implements PHP_CodeSniffer_Sniff
+
+class PHPStandard_Sniffs_Spacing_SpaceBetweenBlocksSniff implements PHP_CodeSniffer_Sniff
 {
 
     /**
@@ -20,8 +20,7 @@ class FroidenStandard_Sniffs_Spacing_SpaceBetweenBlocksSniff implements PHP_Code
      * @return int[]
      * @see    Tokens.php
      */
-    public function register()
-    {
+    public function register() {
         return array(
             T_IF,
             T_ELSE,
@@ -68,8 +67,7 @@ class FroidenStandard_Sniffs_Spacing_SpaceBetweenBlocksSniff implements PHP_Code
      *                  pointer is reached. Return (count($tokens) + 1) to skip
      *                  the rest of the file.
      */
-    public function process(PHP_CodeSniffer_File $phpcsFile, $stackPtr)
-    {
+    public function process(PHP_CodeSniffer_File $phpcsFile, $stackPtr) {
         $tokens = $phpcsFile->getTokens();
 
         switch ($tokens[$stackPtr]['type']) {
@@ -87,6 +85,7 @@ class FroidenStandard_Sniffs_Spacing_SpaceBetweenBlocksSniff implements PHP_Code
                     $error = 'Construct blocks should be separated by two lines';
                     $phpcsFile->addError($error, $stackPtr);
                 }
+
                 break;
             case 'T_CLOSE_CURLY_BRACKET':
                 // Which condition this token belongs to
