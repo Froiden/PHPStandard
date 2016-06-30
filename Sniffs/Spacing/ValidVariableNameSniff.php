@@ -5,13 +5,6 @@
         throw new PHP_CodeSniffer_Exception('Class PHP_CodeSniffer_Standards_AbstractVariableSniff not found');
     }
 
-    /**
-     * FroidenStandard_Sniffs_Spacing_ValidVariableNameSniff.
-     *
-     * Checks the naming of variables and member variables. This file has been rewritten with some changes
-     * to skip checking camel case for object variable names and underscore for protected variable names
-     *
-     */
     class php_standard_Sniffs_Spacing_ValidVariableNameSniff extends PHP_CodeSniffer_Standards_AbstractVariableSniff
     {
         private $_ignore = array(
