@@ -1,5 +1,5 @@
 {
-    "name": "froiden/PHPStandard",
+    "name": "froiden/php_standard",
     "description": "PHP coding standard to be followed at Froiden",
     "type": "php-code-sniffer",
     "require": {
