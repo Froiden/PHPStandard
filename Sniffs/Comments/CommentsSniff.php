@@ -14,6 +14,12 @@
 
             if ($tokens[$stackPtr]["type"] == "T_COMMENT") {
                 $content = $tokens[$stackPtr]["content"];
+
+                if (substr($content, 0, 2) != "//") {
+                    // This is not a multiline comment
+                    return;
+                }
+
                 // This is a comment. If it is not a region comment, then it should have a space
                 // at start and must begin if a capital letter if not a multi line comment
 
