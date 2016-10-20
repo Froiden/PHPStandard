@@ -38,6 +38,11 @@ class php_standard_Sniffs_Spacing_SpaceBetweenBlocksSniff implements PHP_CodeSni
 
                 break;
             case 'T_CLOSE_CURLY_BRACKET':
+
+                if (!isset($tokens[$stackPtr]["scope_condition"])) {
+                    break;
+                }
+
                 // Which condition this token belongs to
                 $conditionPosition = $tokens[$stackPtr]["scope_condition"];
                 $conditionType = $tokens[$conditionPosition]["type"];
@@ -51,6 +56,10 @@ class php_standard_Sniffs_Spacing_SpaceBetweenBlocksSniff implements PHP_CodeSni
                     // Find next non-white space (start of next statement/block
                     $nonWhitePosition = $stackPtr + 1;
                     $onlyIfBlock = true;
+
+                    if (!isset($tokens[$nonWhitePosition])) {
+                        break;
+                    };
 
                     while(true) {
                         if ($tokens[$nonWhitePosition]["type"] == "T_ELSEIF"
