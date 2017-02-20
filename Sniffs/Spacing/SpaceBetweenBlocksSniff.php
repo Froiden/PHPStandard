@@ -62,8 +62,8 @@ class php_standard_Sniffs_Spacing_SpaceBetweenBlocksSniff implements PHP_CodeSni
                     };
 
                     while(true) {
-                        if ($tokens[$nonWhitePosition]["type"] == "T_ELSEIF"
-                            || $tokens[$nonWhitePosition]["type"] == "T_ELSE")  {
+                        if (($tokens[$nonWhitePosition]["type"] == "T_ELSEIF"
+                            || $tokens[$nonWhitePosition]["type"] == "T_ELSE"))  {
                             // This is not an only if block
                             $onlyIfBlock = false;
                         }

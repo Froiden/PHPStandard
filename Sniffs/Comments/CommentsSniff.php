@@ -24,7 +24,7 @@
                 // at start and must begin if a capital letter if not a multi line comment
 
                 // Check region comment
-                if (!(strpos($content, "//region") === 0) && !(strpos($content, "//endregion") === 0)) {
+                if (!(strpos($content, "//region") === 0) && !(strpos($content, "//endregion") === 0) && trim($content) !== "//") {
                     // Check multiline comment
                     $multiline = false;
 
