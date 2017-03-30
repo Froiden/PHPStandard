@@ -53,41 +53,41 @@ class php_standard_Sniffs_Spacing_SpaceBetweenBlocksSniff implements PHP_CodeSni
                     || $conditionType == "T_SWITCH" || $conditionType == "T_FOR"
                 )
                 {
-                    // Find next non-white space (start of next statement/block
+                    // Find next non-white space (start of next statement/block)
                     $nonWhitePosition = $stackPtr + 1;
                     $onlyIfBlock = true;
+                    $foundNonWhite = false;
 
-                    if (!isset($tokens[$nonWhitePosition])) {
-                        break;
-                    };
+                    if (isset($tokens[$nonWhitePosition])) {
+                        while(true) {
+                            if (($tokens[$nonWhitePosition]["type"] == "T_ELSEIF"
+                                || $tokens[$nonWhitePosition]["type"] == "T_ELSE"))  {
+                                // This is not an only if block
+                                $onlyIfBlock = false;
+                            }
 
-                    while(true) {
-                        if (($tokens[$nonWhitePosition]["type"] == "T_ELSEIF"
-                            || $tokens[$nonWhitePosition]["type"] == "T_ELSE"))  {
-                            // This is not an only if block
-                            $onlyIfBlock = false;
+                            if ($tokens[$nonWhitePosition]["type"] == "T_WHITESPACE" && isset($tokens[$nonWhitePosition + 1])) {
+                                $foundNonWhite = true;
+                                $nonWhitePosition++;
+                                continue;
+                            }
+                            else {
+                                break;
+                            }
                         }
 
-                        if ($tokens[$nonWhitePosition]["type"] == "T_WHITESPACE") {
-                            $nonWhitePosition++;
-                            continue;
-                        }
-                        else {
+                        if (!$onlyIfBlock) {
+                            // If this is not only if block, then break, because we need to check this condition
+                            // for else statements
                             break;
                         }
-                    }
 
-                    if (!$onlyIfBlock) {
-                        // If this is not only if block, then break, because we need to check this condition
-                        // for else statements
-                        break;
-                    }
+                        $lineDiff = $tokens[$nonWhitePosition]["line"] - $tokens[$stackPtr]["line"];
 
-                    $lineDiff = $tokens[$nonWhitePosition]["line"] - $tokens[$stackPtr]["line"];
-
-                    if ($lineDiff < 2 && $tokens[$nonWhitePosition]["type"] != "T_CLOSE_CURLY_BRACKET") {
-                        $error = 'Construct blocks should be separated by two lines';
-                        $phpcsFile->addError($error, $stackPtr);
+                        if ($lineDiff < 2 && $tokens[$nonWhitePosition]["type"] != "T_CLOSE_CURLY_BRACKET" && $foundNonWhite) {
+                            $error = 'Construct blocks should be separated by two lines';
+                            $phpcsFile->addError($error, $stackPtr);
+                        }
                     }
                 }
                 break;
