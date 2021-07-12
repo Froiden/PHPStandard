@@ -61,4 +61,6 @@
     <rule ref="./Sniffs/Spacing/SpaceBetweenBlocksSniff.php" />
     <rule ref="./Sniffs/Usage/UnusedFunctionVariableSniff.php" />
     <rule ref="./Sniffs/Comments/CommentsSniff.php" />
+
+    <exclude-pattern>*.blade.php</exclude-pattern>
 </ruleset>
