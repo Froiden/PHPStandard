@@ -17,18 +17,16 @@ You follow the steps respective to your favourite IDE to configure PHP CodeSniff
 * **ruleset.xml** - For CodeSniffer
 * **rulesetmd.xml** - For MessDetector
 
-
-## VS Code SETUP
-Install the extension name **phpcs** by **Ioannis Kappas**
-
-![N|Solid](https://public.froid.works/phpcsvs-2.png)
-After Activation add the below file to settings.json file
-
-	"phpcs.standard": "~/.composer/vendor/froiden/php_standard/ruleset.xml", 
-
-
-  ![N|Solid](https://public.froid.works/vs-settings.png) 
-
-
 ## Attribution
 Some sniffs in this repository have been derived from original PHP_CodeSniffer project. Credits for those go to the respective developers.
+
+## VS Code SETUP
+Install the extension name **PHP Sniffer** by **wongjn**
+
+![N|Solid](https://public.froid.works/php-snif.png)
+After Activation add the below file to settings.json file
+
+	"phpSniffer.standard": "~/.composer/vendor/froiden/php_standard/ruleset.xml",
+
+
+  ![N|Solid](https://public.froid.works/vs-settings-1.png) 
