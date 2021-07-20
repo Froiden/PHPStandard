@@ -41,3 +41,38 @@ For Windows
 
 
   ![N|Solid](https://public.froid.works/vs-settings-1.png) 
+
+
+
+
+To check 
+
+	phpcs --standard=<PATH_OF_RULESET> <SPACE> <PATH_OF_FILEs_CHECK>
+
+TO fix
+
+	phpcbf --standard=<PATH_OF_RULESET> <SPACE> <PATH_OF_FILEs_CHECK>
+
+
+Ignoring a file
+
+	// @codingStandardsIgnoreFile
+
+	// phpcs:ignoreFile
+
+Ignoring a line
+
+	// @codingStandardsIgnoreLine
+
+	// phpcs:ignore
+
+Ignoring a block
+
+
+	// @codingStandardsIgnoreStart
+
+	// phpcs:disable
+
+	// @codingStandardsIgnoreEnd
+
+	// phpcs:enable
