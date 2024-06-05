@@ -7,8 +7,6 @@
  * @link     http://pear.php.net/package/PHP_CodeSniffer
  */
 
-namespace Drupal\Sniffs\Classes;
-
 use PHP_CodeSniffer\Files\File;
 use PHP_CodeSniffer\Sniffs\Sniff;
 use PHP_CodeSniffer\Util\Tokens;
